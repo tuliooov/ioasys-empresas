@@ -1,0 +1,41 @@
+.titleH3 {
+  width: 10.75rem !important;
+  height: 3.75rem !important;
+  margin: 0rem 2rem 0.5rem !important;
+  font-family: Roboto !important;
+  font-size: 1.6rem !important;
+  font-weight: bold !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: normal !important;
+  letter-spacing: -1.2px !important;
+  text-align: center !important;
+  color: #383743 !important;
+}
+
+.subTitleP {
+  width: 21.938rem !important;
+  height: 3.125rem !important;
+  margin: 0.5rem 2rem 1rem !important;
+  font-family: Roboto !important;
+  font-size: 1.063rem !important;
+  font-weight: normal !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.48 !important;
+  letter-spacing: 0.2px !important;
+  text-align: center !important;
+  color: #383743 !important;
+}
+
+.errorMessageP {
+  height: 1.5rem !important;
+  font-family: Roboto !important;
+  font-size: 0.76rem !important;
+  font-weight: normal !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.95 !important;
+  letter-spacing: -0.17px !important;
+  text-align: center !important;
+}
