@@ -1,6 +1,6 @@
 //REACT
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 //FILES PROJECT
 import { only_enterprise } from "../../services/requests";
@@ -65,6 +65,8 @@ const useStyles = makeStyles((theme) => {
 const Empresas = (props) => {
   const classes = useStyles();
   const theme = useTheme();
+  const history = useHistory();
+
   const { name } = useParams();
 
   const { estado, dispatch } = props;
@@ -85,6 +87,12 @@ const Empresas = (props) => {
       console.log(response);
       if (response?.errors?.length > 0) {
         console.log("error", response?.errors);
+        localStorage.clear()
+        history.push('/login')
+        dispatch({
+          type: "Enterpreses_Search",
+          enterpreseSelected: {},
+        });
       } else {
         console.log("success");
         dispatch({

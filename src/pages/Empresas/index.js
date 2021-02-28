@@ -1,5 +1,6 @@
 //REACT
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 //FILES PROJECT
 import { all_Enterprises } from "../../services/requests";
@@ -37,6 +38,8 @@ const useStyles = makeStyles((theme) => {
 
 const Enterprises = ({ estado, dispatch }) => {
   const classes = useStyles();
+  const history = useHistory();
+
   const { enterprises } = estado;
 
   const [time] = useState(false);
@@ -52,6 +55,12 @@ const Enterprises = ({ estado, dispatch }) => {
       console.log(response);
       if (response?.errors?.length > 0) {
         console.log("error");
+        localStorage.clear()
+        history.push('/login')
+        dispatch({
+          type: "Enterpreses_Search",
+          enterprises: [],
+        });
       } else {
         console.log("success");
         dispatch({
